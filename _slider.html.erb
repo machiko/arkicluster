@@ -1,0 +1,76 @@
+<div id="menu">
+  <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item <% if request.path == "/index.html" || request.path == "/" || request.path == "/contact.html"  %>active<% end %>">
+          <a href="index.html"><img src="images/about/banner_0.jpg" alt=""></a>
+        </div>
+        <div class="item <% if request.path == "/family.html" %>active<% end %> ">
+          <a href="family.html"><img src="images/family/banner_0.jpg" alt=""></a>
+        </div>
+        <div class="item <% if request.path == "/industrial.html" %>active<% end %> ">
+          <a href="industrial.html"><img src="images/industrial/banner_0.jpg" alt=""></a>
+        </div>
+        <div class="item <% if request.path == "/security.html" %>active<% end %> ">
+          <a href="security.html"><img src="images/security/banner_0.jpg" alt=""></a>
+        </div>
+        <div class="item <% if request.path == "/application.html" %>active<% end %> ">
+          <a href="application.html"><img src="images/application/banner_0.jpg" alt=""></a>
+        </div>
+        <div class="item <% if request.path == "/mitech.html" %>active<% end %> ">
+          <a href="mitech.html"><img src="images/mitech/banner_0.jpg" alt=""></a>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+    </div><!-- /.carousel -->
+	<div class='cssmenu about'>
+		<ul>
+		   <li class='has-sub'><a href='index.html'><span>關於藝匠</span></a>
+		      <ul>
+		         <li><a href='index.html#about_arki_top'><span>公司歷史</span></a></li>
+		         <li><a href='index.html#about_arki_mid'><span>研發團隊背景</span></a></li>
+		      </ul>
+		   </li>
+		   <li class='last'><a href='contact.html#contact'><span>聯絡我們</span></a>
+		   </li>
+		</ul>
+	</div>
+
+	<div class='cssmenu service'>
+		<ul>
+		   <li class='has-sub'><a href='family.html'><span>智能家庭</span></a>
+					<ul>
+		         <li><a href='family.html#family_top'><span>智能建築</span></a></li>
+		         <li><a href='family.html#family_mid'><span>智能家電</span></a></li>
+		         <li><a href='family.html#family_bottom'><span>無線多媒體傳輸</span></a></li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='industrial.html'><span>智能工業</span></a>
+		      <ul>
+		         <li><a href='industrial.html#indust_top'><span>工業應用</span></a></li>
+		         <li><a href='industrial.html#indust_bottom'><span>工業智能傳輸</span></a></li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='security.html'><span>智能安防</span></a>
+		      <ul>
+		         <li><a href='security.html#sec_top'><span>安防系統</span></a></li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='application.html'><span>產品應用</span></a>
+					<ul>
+		         <li><a href='application.html#app_remote'><span>智能遙控方案</span></a></li>
+		         <li><a href='application.html#app_full'><span>全向遙控方案</span></a></li>
+		         <li><a href='application.html#app_power'><span>電源監控方案</span></a></li>
+		         <li><a href='application.html#app_media'><span>智能多媒體方案</span></a></li>
+		      </ul>
+		   </li>
+		   <li class='has-sub'><a href='mitech.html'><span>MI 技術</span></a>
+					<ul>
+		         <li><a href='mitech.html#mitech_arch'><span>運作架構</span></a></li>
+		         <li><a href='mitech.html#mitech_research'><span>技術研發</span></a></li>
+		         <!-- <li><a href='mitech.html#mitech_feature'><span>產品特色</span></a></li> -->
+		      </ul>
+		   </li>
+		</ul>
+	</div>
+</div>

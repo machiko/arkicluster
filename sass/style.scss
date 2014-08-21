@@ -1,0 +1,397 @@
+@import "compass/reset";
+@import "compass/css3";
+
+@mixin element-size($name) {
+	$path: "../images/about/" + $name + ".jpg";
+	width: image-width($path);
+	height: image-height($path);
+}
+
+//變數
+$sysColorGreen: rgba(182, 205, 0, 1);
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+	color: #747474;
+	background-color: #FFFFFF;
+}
+
+.content-wrapper {
+	position: relative;
+	width: image-width('../images/about/top.jpg');
+	margin: 0 auto;
+}
+
+header {
+	@include background(url("../images/about/top.jpg") no-repeat center center);
+	@include background-size(cover);
+	width: 100%;
+	height: image-height('../images/about/top.jpg');
+}
+
+footer {
+	@include background(url("../images/about/footer.jpg") no-repeat center center);
+	width: image-width("../images/about/footer.jpg");
+	height: image-height("../images/about/footer.jpg");
+	margin: 0 auto;
+}
+
+#home_footer {
+	@include background(url("../images/industrial/footer_icon.jpg") no-repeat center center);
+	width: image-width("../images/industrial/footer_icon.jpg");
+	height: image-height("../images/industrial/footer_icon.jpg");
+	margin: 20px auto 0;
+}
+
+#icon_wrapper {
+	display: table;
+	margin: 0 auto;
+	min-width: image-width("../images/about/logo.png") + image-width("../images/about/slogan.png") + 370px;
+}
+
+#logo {
+	@include element-size("logo");
+	margin-bottom: 20px;
+	margin-right: 300px;
+}
+
+#slogan {
+	@include element-size("slogan");
+	margin-left: 70px;
+}
+
+#menu {
+	// @include background(url("../images/about/banner_0.jpg"));
+	// @include background-size(cover);
+	@include element-size("banner_0");
+	position: relative;
+}
+
+// about start
+#slider {
+  @include element-size("banner_0");
+	position: relative;
+	margin: 0 auto;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+#slider_queue {
+	@include element-size("banner_0");
+	cursor: move;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+  overflow: hidden;
+}
+
+#slider li {
+	position: absolute;
+}
+
+#about_arki_top {
+	@include background(url("../images/about/banner_1.jpg"));
+	@include background-size(cover);
+	@include element-size("banner_1");
+}
+
+#about_arki_mid {
+	@include background(url("../images/about/banner_2.jpg"));
+	@include background-size(cover);
+	@include element-size("banner_2");
+}
+
+#about_arki_bottom {
+	@include background(url("../images/about/banner_3.jpg"));
+	@include background-size(cover);
+	@include element-size("banner_3");
+	margin-top: 20px;
+}
+
+#about_arki_app {
+	padding: 50px 100px;
+	h5 {
+		color: $sysColorGreen;
+	}
+	section {
+		line-height: 28px;
+		color: rgba(106, 106, 106, 1);
+		p {
+			margin-top: 32px;
+		}
+	}
+}
+
+#about_arki_milestone {
+	padding: 50px 100px;
+	table {
+		width: 100%;
+	}
+	tr {
+		height: 32px;
+	}
+	td {
+		width: 58%;
+		color: rgba(106, 106, 106, 1);
+		span {
+			padding: 5px;
+			color: rgba(254, 255, 252, 1);
+			background-color: $sysColorGreen;
+		}
+	}
+	td:first-child {
+		width: 42%;
+	}
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+  z-index: 10;
+}
+// about end
+
+//industry start
+.copyright {
+	text-align: center;
+	margin-top: 15px;
+}
+
+#indust_top {
+	padding: 50px;
+	> img {
+		display: block;
+		margin: 0 auto;
+	}
+	> section {
+		padding: 50px 0 0 150px;
+	}
+	> section > div {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	> section > div > h5 {
+		position: absolute;
+		bottom: 0;
+		left: 85px;
+	}
+	> section > p {
+		line-height: 26px;
+	}
+}
+
+#indust_mid {
+	padding: 120px 0 50px 0;
+	text-align: center;
+	p {
+		margin-top: 12px;
+		font-size: 26px;
+		color: $sysColorGreen;
+	}
+}
+
+#indust_bottom {
+	padding: 120px 0 50px 0;
+	img {
+		display: block;
+		margin: 0 auto 50px auto;
+	}
+	> img:last-child {
+		margin: 0 auto;
+	}
+	> div {
+		position: relative;
+	}
+	> div > span {
+		position: absolute;
+		left: 250px;
+		top: 27px;
+		color: $sysColorGreen;
+	}
+	section {
+		position: absolute;
+		right: 25px;
+		top: 35px;
+		line-height: 35px;
+	}
+	section > h4 {
+		margin-left: -18px;
+		font-weight: bolder;
+		font-size: 18px;
+	}
+	section > ul > li {
+		list-style: initial;
+	}
+}
+
+//industry end
+
+//family start
+#family_top {
+	padding: 50px 0 50px 0;
+	// border-left: 1px solid #ccc;
+	// border-right: 1px solid #ccc;
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+	section {
+		text-align: center;
+	}
+	section > p {
+		line-height: 40px;
+		display: inline-flex;
+	}
+	section > p > span {
+		@include background(url("../images/family/message_1.jpg") no-repeat);
+		background-position: 2px 7px;
+		display: block;
+		width: 68px;
+	}
+	section > p:last-child {
+		margin-left: 255px;
+	}
+}
+
+#family_mid {
+	padding: 50px 0 50px 0;
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+}
+
+#family_bottom {
+	padding: 50px 0 50px 0;
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+}
+
+//family end
+
+//security start
+#sec_top {
+	padding: 50px 0 50px 0;
+	> img {
+		display: block;
+		margin: 0 auto 50px auto;
+	}
+}
+//security end
+
+//application start
+#app_remote {
+	padding: 0px 0 50px 0;
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+	>img:nth-child(3) {
+	margin: 0 auto;
+	}
+}
+
+#app_full {
+	padding: 0 0 50px 0;
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+	>img:nth-child(3) {
+	margin: 0 auto;
+	}
+}
+
+#app_power {
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+	>img:nth-child(2) {
+	margin: 0 auto;
+	}
+}
+
+#app_media {
+	padding: 50px 0 50px 0;
+	> img {
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+	>img:nth-child(3) {
+	margin: 0 auto;
+	}
+}
+//application end
+
+//mitech start
+#mitech_arch {
+	padding: 20px 0 0 0;
+	> img {
+		display: block;
+		margin: 0 auto 50px auto;
+	}
+}
+
+#mitech_research {
+	padding: 0 0 0 0;
+	> img {
+		display: block;
+		margin: 0 auto 50px auto;
+	}
+}
+
+#mitech_feature {
+	padding: 50px 0 0 0;
+	> img {
+		display: block;
+		margin: 0 auto 50px auto;
+	}
+}
+//mitech end
+
+//scroll top
+.scroll-top-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+    z-index: 99999999;
+    background-color: #777777;
+    color: #eeeeee;
+    width: 50px;
+    height: 48px;
+    line-height: 48px;
+    right: 30px;
+    bottom: 30px;
+    padding-top: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+    background-color: #888888;
+}
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+    opacity: 1.0;
+}
+.scroll-top-wrapper i.fa {
+    line-height: inherit;
+}

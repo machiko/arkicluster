@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<title>藝匠科技</title>
+	<link rel="stylesheet" href="stylesheets/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="stylesheets/style.css" media="screen">
+	<link rel="stylesheet" href="stylesheets/menu.css" media="screen">
+	<link rel="stylesheet" href="stylesheets/font-awesome.css" media="screen">
+	<!-- <link rel="stylesheet" id="font-awesome-css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen"> -->
+
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/bootstrap-transition.js"></script>
+	<script src="javascripts/bootstrap-carousel.js"></script>
+	<script src="javascripts/scroll-top.js"></script>
+</head>
+<body>
+	<div class="content-wrapper">
+		<%= render :partial => "header" %>
+		<%= render :partial => "slider" %>
+		<%= yield :about_arki_top %>
+		<%= yield :about_arki_mid %>
+		<%= yield :about_arki_bottom %>
+		<%= render :partial => "home_footer" %>
+		<%= render :partial => "footer" %>
+	</div>
+	<div class="scroll-top-wrapper ">
+    <span class="scroll-top-inner">
+        <i class="fa fa-2x fa-arrow-circle-up"></i>
+    </span>
+	</div>
+</body>
+</html>

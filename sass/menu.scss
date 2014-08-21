@@ -1,0 +1,141 @@
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+@import "compass/css3";
+
+.cssmenu {
+  // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 10px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.cssmenu > ul {
+  width: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.8);
+  @include border-radius(2px);
+}
+.cssmenu > ul li#responsive-tab {
+  display: none;
+  /* Hide for large screens */
+
+}
+.cssmenu > ul li {
+  display: inline-block;
+  width: 115px;
+  *display: inline;
+  zoom: 1;
+}
+.cssmenu > ul li.right {
+  float: right;
+}
+.cssmenu > ul li.has-sub {
+  position: relative;
+}
+.cssmenu > ul li.has-sub:hover ul {
+  display: block;
+}
+.cssmenu > ul li.has-sub ul {
+  display: none;
+  width: 115px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 0 none;
+}
+.cssmenu > ul li.has-sub ul li {
+  display: block;
+}
+.cssmenu > ul li.has-sub > a {
+}
+
+.cssmenu > ul li > a:hover,
+.cssmenu > ul li.has-sub > a.active,
+.cssmenu > ul li.has-sub > a:hover {
+  background-color: rgba(175, 211, 10, 0.5);
+  background-position: 90% 195%;
+}
+.cssmenu > ul li.has-sub > ul li a:hover {
+  background-color: rgba(125, 129, 107, 0.5);
+  color: #F2F2F2;
+}
+.cssmenu > ul li a {
+  font-size: 12px;
+  display: block;
+  padding: 12px 15px 11px 16px;
+  text-decoration: none;
+  text-align: center;
+  // color: #747474;
+  // text-shadow: 0px 1px 0px #fff;
+}
+.cssmenu > ul li a.active,
+.cssmenu > ul li a:hover {
+  // background: #d80041;
+  // text-shadow: 0px 1px 0px #000;
+}
+@media (max-width: 600px) {
+  .cssmenu > ul {
+    width: 100%;
+  }
+  .cssmenu > ul li#responsive-tab {
+    display: block;
+  }
+  .cssmenu > ul li#responsive-tab a {
+  }
+  .cssmenu > ul li#responsive-tab a:hover {
+    background-color: #d80041;
+    background-position: 95% 135%;
+  }
+  .cssmenu > ul li {
+    display: none;
+  }
+  .cssmenu > ul li.right {
+    float: none;
+  }
+  .cssmenu > ul li.has-sub {
+    position: relative;
+  }
+  .cssmenu > ul li.has-sub ul {
+    display: block;
+    position: static;
+    width: 100%;
+    background: #ffffff;
+    border: 0 none;
+  }
+  .cssmenu > ul li.has-sub ul li {
+    display: block !important;
+  }
+  .cssmenu > ul li.has-sub ul li a span {
+    display: block;
+    padding-left: 24px;
+  }
+  .cssmenu > ul li.has-sub > a {
+    background-image: none;
+  }
+}
+/* Make sure they show even if hidden in mobile view by JS */
+@media (min-width: 600px) {
+  .cssmenu > ul > li.collapsed {
+    display: inline-block !important;
+    *display: inline;
+    zoom: 1;
+  }
+  .cssmenu > ul ul li.collapsed {
+    display: block !important;
+  }
+}
+
+.about {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+.service {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+}
